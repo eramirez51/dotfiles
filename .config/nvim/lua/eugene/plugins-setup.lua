@@ -99,7 +99,7 @@ return packer.startup(function(use)
 
 	use("notjedi/nvim-rooter.lua")
 	use("kevinhwang91/rnvimr")
-
+	use("mrjones2014/smart-splits.nvim")
 	use({ "stevearc/aerial.nvim" }) -- for code outline
 	use({ "cljoly/telescope-repo.nvim" }) -- for showing git repos in local system
 	use({ "LukasPietzschmann/telescope-tabs" }) -- for easily switching tabs

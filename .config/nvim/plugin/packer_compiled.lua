@@ -217,6 +217,11 @@ _G.packer_plugins = {
     path = "/home/eugs51/.local/share/nvim/site/pack/packer/start/rnvimr",
     url = "https://github.com/kevinhwang91/rnvimr"
   },
+  ["smart-splits.nvim"] = {
+    loaded = true,
+    path = "/home/eugs51/.local/share/nvim/site/pack/packer/start/smart-splits.nvim",
+    url = "https://github.com/mrjones2014/smart-splits.nvim"
+  },
   ["telescope-env.nvim"] = {
     loaded = true,
     path = "/home/eugs51/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
