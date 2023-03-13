@@ -17,6 +17,7 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 -- plugin keymaps
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- go to previous tab
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- go to previous tab
+keymap.set("n", "<leader>b", ":NvimTreeOpen | :NvimTreeFocus<CR>")
 
 keymap.set("n", "<leader>r", ":RnvimrToggle<CR>") -- toggle Rnvimr
 

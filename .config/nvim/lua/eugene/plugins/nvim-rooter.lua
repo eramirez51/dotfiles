@@ -1,12 +1,11 @@
-
-local setup,rooter = pcall(require, "nvim-rooter")
+local setup, rooter = pcall(require, "nvim-rooter")
 
 if not setup then
-    return
+	return
 end
 
 rooter.setup({
-    rooter_patterns = { '.git', 'scripts' },
-    trigger_patterns = { '*' },
-    manual = false,
+	rooter_patterns = { ".git", "scripts", "init.lua" },
+	trigger_patterns = { "*" },
+	manual = false,
 })
