@@ -1,17 +1,22 @@
-require("eugene.plugins-setup")
-require("eugene.core.options")
-require("eugene.core.keymaps")
-require("eugene.core.colorscheme")
-require("eugene.plugins.nvim-tree")
-require("eugene.plugins.rnvimr")
-require("eugene.plugins.comment")
-require("eugene.plugins.lualine")
-require("eugene.plugins.nvim-rooter")
-require("eugene.plugins.telescope")
-require("eugene.plugins.nvim-cmp")
-require("eugene.plugins.autopairs")
-require("eugene.plugins.lsp.mason")
-require("eugene.plugins.lsp.lspsaga")
-require("eugene.plugins.lsp.lspconfig")
-require("eugene.plugins.lsp.null-ls")
-require("eugene.plugins.aerial")
+require "core"
+
+local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
+
+if custom_init_path then
+  dofile(custom_init_path)
+end
+
+require("core.utils").load_mappings()
+
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+-- bootstrap lazy.nvim!
+if not vim.loop.fs_stat(lazypath) then
+  require("core.bootstrap").gen_chadrc_template()
+  require("core.bootstrap").lazy(lazypath)
+end
+
+vim.opt.rtp:prepend(lazypath)
+require "plugins"
+
+dofile(vim.g.base46_cache .. "defaults")
